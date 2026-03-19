@@ -12,7 +12,13 @@ cap_airflow/plugins/
 __pycache__/
 *.pyc
 .env
+*.env
 
 # OS
 .DS_Store
 Thumbs.db
+
+# Credentials
+profiles.yml
+*.key
+*.pem
