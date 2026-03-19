@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2025.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="114" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File />
+          <FormatSpecificOptions UseDcm="true" Format="23" RecordLimit="">
+            <Query>SELECT * FROM CAP_DB.RAW.LINEITEMS LIMIT 10000</Query>
+            <TableStyle>Quoted</TableStyle>
+            <CacheData>False</CacheData>
+            <Table />
+            <SessionReadOnly>True</SessionReadOnly>
+            <ReadUncommitted>False</ReadUncommitted>
+            <Connection DcmType="ConnectionId" DcmTitle="SNOWFLAKE_CAP — GANESHKUMAR2026" DcmSchemaId="database-odbc-dsn-snowflake">6d6a1fba-a77d-4107-8de4-c0262c8b0731</Connection>
+            <NoProgress>True</NoProgress>
+            <PostSQL />
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <PreSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>dcm:SNOWFLAKE_CAP — GANESHKUMAR2026
+Query=SELECT * FROM CAP_DB.RAW.LIN...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="L_ORDERKEY" scale="0" size="39" source="File: SELECT * FROM CAP_DB.RAW.LINEITEMS LIMIT 10000" type="FixedDecimal" />
+            <Field name="L_PARTKEY" scale="0" size="39" source="File: SELECT * FROM CAP_DB.RAW.LINEITEMS LIMIT 10000" type="FixedDecimal" />
+            <Field name="L_SUPPKEY" scale="0" size="39" source="File: SELECT * FROM CAP_DB.RAW.LINEITEMS LIMIT 10000" type="FixedDecimal" />
+            <Field name="L_LINENUMBER" scale="0" size="39" source="File: SELECT * FROM CAP_DB.RAW.LINEITEMS LIMIT 10000" type="FixedDecimal" />
+            <Field name="L_QUANTITY" scale="2" size="14" source="File: SELECT * FROM CAP_DB.RAW.LINEITEMS LIMIT 10000" type="FixedDecimal" />
+            <Field name="L_EXTENDEDPRICE" scale="2" size="14" source="File: SELECT * FROM CAP_DB.RAW.LINEITEMS LIMIT 10000" type="FixedDecimal" />
+            <Field name="L_DISCOUNT" scale="2" size="14" source="File: SELECT * FROM CAP_DB.RAW.LINEITEMS LIMIT 10000" type="FixedDecimal" />
+            <Field name="L_TAX" scale="2" size="14" source="File: SELECT * FROM CAP_DB.RAW.LINEITEMS LIMIT 10000" type="FixedDecimal" />
+            <Field name="L_RETURNFLAG" size="1" source="File: SELECT * FROM CAP_DB.RAW.LINEITEMS LIMIT 10000" type="V_WString" />
+            <Field name="L_LINESTATUS" size="1" source="File: SELECT * FROM CAP_DB.RAW.LINEITEMS LIMIT 10000" type="V_WString" />
+            <Field name="L_SHIPDATE" source="File: SELECT * FROM CAP_DB.RAW.LINEITEMS LIMIT 10000" type="Date" />
+            <Field name="L_COMMITDATE" source="File: SELECT * FROM CAP_DB.RAW.LINEITEMS LIMIT 10000" type="Date" />
+            <Field name="L_RECEIPTDATE" source="File: SELECT * FROM CAP_DB.RAW.LINEITEMS LIMIT 10000" type="Date" />
+            <Field name="L_SHIPINSTRUCT" size="25" source="File: SELECT * FROM CAP_DB.RAW.LINEITEMS LIMIT 10000" type="V_WString" />
+            <Field name="L_SHIPMODE" size="10" source="File: SELECT * FROM CAP_DB.RAW.LINEITEMS LIMIT 10000" type="V_WString" />
+            <Field name="L_COMMENT" size="44" source="File: SELECT * FROM CAP_DB.RAW.LINEITEMS LIMIT 10000" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="390" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="L_ORDERKEY" selected="True" rename="order_id" />
+            <SelectField field="L_PARTKEY" selected="True" rename="part_id" />
+            <SelectField field="L_SUPPKEY" selected="True" rename="supplier_id" />
+            <SelectField field="L_LINENUMBER" selected="True" rename="line_number" />
+            <SelectField field="L_QUANTITY" selected="True" rename="quantity" />
+            <SelectField field="L_EXTENDEDPRICE" selected="True" rename="extended_price" />
+            <SelectField field="L_DISCOUNT" selected="True" rename="discount" />
+            <SelectField field="L_TAX" selected="True" rename="tax" />
+            <SelectField field="L_RETURNFLAG" selected="True" rename="return_flag" />
+            <SelectField field="L_LINESTATUS" selected="True" rename="line_status" />
+            <SelectField field="L_SHIPDATE" selected="True" rename="ship_date" />
+            <SelectField field="L_COMMITDATE" selected="True" rename="commit_date" />
+            <SelectField field="L_RECEIPTDATE" selected="True" rename="receipt_date" />
+            <SelectField field="L_SHIPINSTRUCT" selected="True" rename="ship_instruct" />
+            <SelectField field="L_SHIPMODE" selected="True" rename="ship_mode" />
+            <SelectField field="L_COMMENT" selected="True" rename="comments" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="534" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[extended_price] * (1 - [discount])" field="total_price" size="8" type="Double" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[total_price = [extended_price] * (1 - [discount])
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="690" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>&gt;=</Operator>
+            <Field>ship_date</Field>
+            <Operands>
+              <PeriodDate>2026-03-19 09:27:41</PeriodDate>
+              <PeriodType>days</PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <StartDate>2026-03-19 09:27:41</StartDate>
+              <EndDate>2026-03-19 09:27:41</EndDate>
+              <Operand>1995-01-01</Operand>
+              <DateType>fixed</DateType>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[ship_date] &gt;= "1995-01-01"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="870" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File />
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions UseDcm="true" MaxRecords="" Format="23">
+            <TableStyle>Quoted</TableStyle>
+            <TransactionMessages>False</TransactionMessages>
+            <Table>CAP_DB.SILVER.LINEITEM_ALTERYX</Table>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <OutputOption>Create</OutputOption>
+            <Connection DcmType="ConnectionId" DcmTitle="SNOWFLAKE_CAP — GANESHKUMAR2026" DcmSchemaId="database-odbc-dsn-snowflake">6d6a1fba-a77d-4107-8de4-c0262c8b0731</Connection>
+            <PostSQL />
+            <TransactionSize>10000</TransactionSize>
+            <PreSQL />
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>dcm:SNOWFLAKE_CAP — GANESHKUMAR2026
+Table=CAP_DB.SILVER.LINEITEM_ALTER...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="True" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>lineitem_alteryx</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="9f14acda-8591-40d6-a881-f7967b336b0f" />
+      <Telemetry>
+        <PreviousWorkflowId value="a12f12be-a5dd-41ad-922c-318f7198c74d" />
+        <OriginWorkflowId value="bb8faea7-67e2-4558-a0ae-ee3386f3f019" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

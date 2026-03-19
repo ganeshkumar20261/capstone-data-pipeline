@@ -1,0 +1,18 @@
+# dbt
+cap_dbt/target/
+cap_dbt/dbt_packages/
+cap_dbt/logs/
+cap_dbt/.dbt/
+
+# Airflow
+cap_airflow/logs/
+cap_airflow/plugins/
+
+# Python
+__pycache__/
+*.pyc
+.env
+
+# OS
+.DS_Store
+Thumbs.db
